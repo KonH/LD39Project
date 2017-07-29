@@ -22,6 +22,9 @@ namespace UDBase_Project.Scripts.Logics {
 			MoveVector.x *= StrafeSpeed;
 			MoveVector.z *= MoveForwardSpeed;
 			MoveVector.z = Mathf.Max(MoveVector.z, 0.0f);
+			if (float.IsNaN(MoveVector.x)) {
+				return;
+			}
 			_rb.velocity = transform.TransformDirection(MoveVector);
 			_rb.MoveRotation(Quaternion.Euler(RotateVector * RotateSpeed));
 		}

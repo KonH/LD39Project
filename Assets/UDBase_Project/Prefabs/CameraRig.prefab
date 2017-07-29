@@ -173,8 +173,8 @@ MonoBehaviour:
   m_AutoTargetPlayer: 0
   m_UpdateType: 0
   m_MoveSpeed: 3
-  m_TurnSpeed: 1
-  m_RollSpeed: 0.2
+  m_TurnSpeed: 3
+  m_RollSpeed: 1
   m_FollowVelocity: 1
   m_FollowTilt: 1
   m_SpinTurnLimit: 90

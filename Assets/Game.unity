@@ -147,6 +147,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114320257644038308, guid: ffc3810864aa84c9281b5c8212dc0d3d,
+        type: 2}
+      propertyPath: Damage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114413270954656400, guid: ffc3810864aa84c9281b5c8212dc0d3d,
+        type: 2}
+      propertyPath: Damage
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffc3810864aa84c9281b5c8212dc0d3d, type: 2}
   m_IsPrefabParent: 0
@@ -286,6 +296,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114091800249656748, guid: dfd7c657afe4141859b1af9976c79440,
+        type: 2}
+      propertyPath: Holder
+      value: 
+      objectReference: {fileID: 1257584123}
     - target: {fileID: 114091800249656748, guid: dfd7c657afe4141859b1af9976c79440,
         type: 2}
       propertyPath: Weapons.Array.data[0]

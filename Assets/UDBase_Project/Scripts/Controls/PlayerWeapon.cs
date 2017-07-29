@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace UDBase_Project.Scripts.Controls {
 	public class PlayerWeapon : MonoBehaviour {
+		public EnergyHolder Holder;
 		public List<Weapon> Weapons = new List<Weapon>();
+		public float EnergyUsage;
 
 		void Update() {
 			if (Input.GetMouseButton(0)) {
@@ -14,6 +16,7 @@ namespace UDBase_Project.Scripts.Controls {
 					}
 					weapon.TryShoot();
 				}
+				Holder.DecreaseEnergy(EnergyUsage * Time.deltaTime);
 			}
 		}
 	}
