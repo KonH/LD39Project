@@ -2,6 +2,7 @@
 using UnityEngine.Events;
 
 namespace UDBase_Project.Scripts.Logics {
+	[RequireComponent(typeof(Collider))]
 	public class Damagable : MonoBehaviour {
 		[HideInInspector]
 		public float Health;

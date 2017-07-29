@@ -298,6 +298,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4871950183395724, guid: ffc3810864aa84c9281b5c8212dc0d3d,
     type: 2}
   m_PrefabInternal: {fileID: 1257584121}
+--- !u!114 &1257584123 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114770078618616458, guid: ffc3810864aa84c9281b5c8212dc0d3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1257584121}
+  m_Script: {fileID: 11500000, guid: 5315431c77e60486690057327a4a688d, type: 3}
 --- !u!1001 &1421238923
 Prefab:
   m_ObjectHideFlags: 0
@@ -508,11 +514,31 @@ Prefab:
       propertyPath: Damagable
       value: 
       objectReference: {fileID: 422827241}
+    - target: {fileID: 224063038945477590, guid: 28931f25c9cff41e680f4f0b091c36a6,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224113504345291366, guid: 28931f25c9cff41e680f4f0b091c36a6,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224113504345291366, guid: 28931f25c9cff41e680f4f0b091c36a6,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224113504345291366, guid: 28931f25c9cff41e680f4f0b091c36a6,
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114254908101685524, guid: 28931f25c9cff41e680f4f0b091c36a6,
+        type: 2}
+      propertyPath: Holder
+      value: 
+      objectReference: {fileID: 1257584123}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28931f25c9cff41e680f4f0b091c36a6, type: 2}
   m_IsPrefabParent: 0

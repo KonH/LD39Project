@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 114667040484116102}
   - component: {fileID: 114795074624231670}
   - component: {fileID: 114567928063192696}
+  - component: {fileID: 114770078618616458}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -194,9 +195,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveForwardSpeed: 6.5
   StrafeSpeed: 0.5
-  RotateSpeed: 1
+  RotateSpeed: 2.5
   MoveVector: {x: 0, y: 0, z: 0}
   RotateVector: {x: 0, y: 0, z: 0}
+--- !u!114 &114770078618616458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1566897806944730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5315431c77e60486690057327a4a688d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Energy: 0
+  MaxEnergy: 100
+  Decrease: 1
 --- !u!114 &114795074624231670
 MonoBehaviour:
   m_ObjectHideFlags: 1
