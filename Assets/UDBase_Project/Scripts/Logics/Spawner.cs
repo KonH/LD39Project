@@ -33,6 +33,9 @@ namespace UDBase_Project.Scripts.Logics {
 		}
 
 		void Update() {
+			if (!Trigger) {
+				return;
+			}
 			TryGenerate();
 		}
 

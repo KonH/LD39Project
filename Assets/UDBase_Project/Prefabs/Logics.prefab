@@ -51,6 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4790942231246620}
   - component: {fileID: 114995539895230082}
+  - component: {fileID: 114091800249656748}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -99,6 +100,20 @@ Transform:
   m_Father: {fileID: 4375837372004862}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114091800249656748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1880508776167978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4879c246acc15438e873d3452b7d0bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapons:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114305766849598522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,8 +133,8 @@ MonoBehaviour:
     MinCount: 10
     MaxCount: 25
   - Prefab: {fileID: 1660207780204382, guid: 5a293a58055de48cd839548a62e117c3, type: 2}
-    MinCount: 3
-    MaxCount: 5
+    MinCount: 1
+    MaxCount: 3
   - Prefab: {fileID: 1447426250144524, guid: 8a1a4c667177f4aaeb14dfd15f1be1a6, type: 2}
     MinCount: 3
     MaxCount: 5
@@ -136,4 +151,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: {fileID: 0}
-  DeadZone: {x: 0.25, y: 0.25}
+  DeadZone: {x: 0.1, y: 0.1}

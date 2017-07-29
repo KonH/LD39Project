@@ -7,6 +7,7 @@ namespace UDBase_Project.Scripts.Logics {
 		[HideInInspector]
 		public float Health;
 		public float MaxHealth = 100.0f;
+		public bool Godmode;
 
 		public UnityEvent OnHealthChanged;
 
@@ -21,9 +22,19 @@ namespace UDBase_Project.Scripts.Logics {
 			}
 		}
 
-		void TakeDamage(float damage) {
+		public void TakeDamage(float damage) {
+			if (Godmode) {
+				return;
+			}
 			Health -= damage;
 			OnHealthChanged.Invoke();
+			if (Health < 0) {
+				Kill();
+			}
+		}
+
+		void Kill() {
+			Destroy(gameObject);
 		}
 	}
 }
