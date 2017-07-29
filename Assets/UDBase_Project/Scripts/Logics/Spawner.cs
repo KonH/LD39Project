@@ -7,6 +7,12 @@ using Random = UnityEngine.Random;
 namespace UDBase_Project.Scripts.Logics {
 	public class Spawner : MonoBehaviour {
 		[System.Serializable]
+		public class GenerationInfo {
+			public GameObject Prefab;
+			public int MinCount, MaxCount;
+		}
+		
+		[System.Serializable]
 		public struct Vector3Int {
 			public int X, Y, Z;
 		}
@@ -19,9 +25,7 @@ namespace UDBase_Project.Scripts.Logics {
 		public Transform Trigger;
 		public float Distance = 10.0f;
 		public float ClearRange = 0.5f;
-		public GameObject ObstaclePrefab;
-		public int MinObstacles;
-		public int MaxObstacles;
+		public List<GenerationInfo> Infos = new List<GenerationInfo>();
 		public List<Block> Blocks = new List<Block>();
 
 		Vector3Int FindPosition() {
@@ -83,11 +87,13 @@ namespace UDBase_Project.Scripts.Logics {
 		}
 		
 		IEnumerator Generate(Vector3 pos) {
-			var obstacles = Random.Range(MinObstacles, MaxObstacles + 1);
-			for (int i = 0; i < obstacles; i++) {
-				var generatePos = FindGeneratePosition(pos);
-				Instantiate(ObstaclePrefab, generatePos, Quaternion.identity);
-				yield return null;
+			foreach (var info in Infos) {
+				var count = Random.Range(info.MinCount, info.MaxCount + 1);
+				for (int i = 0; i < count; i++) {
+					var generatePos = FindGeneratePosition(pos);
+					Instantiate(info.Prefab, generatePos, Quaternion.identity);
+					yield return null;
+				}	
 			}
 		}
 	}

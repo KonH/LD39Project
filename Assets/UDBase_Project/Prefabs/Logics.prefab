@@ -113,10 +113,13 @@ MonoBehaviour:
   Trigger: {fileID: 0}
   Distance: 50
   ClearRange: 0.5
-  ObstaclePrefab: {fileID: 1974282350944402, guid: 41217e7025db04977a03c97d8e85bb13,
-    type: 2}
-  MinObstacles: 25
-  MaxObstacles: 50
+  Infos:
+  - Prefab: {fileID: 1974282350944402, guid: 41217e7025db04977a03c97d8e85bb13, type: 2}
+    MinCount: 10
+    MaxCount: 25
+  - Prefab: {fileID: 1660207780204382, guid: 5a293a58055de48cd839548a62e117c3, type: 2}
+    MinCount: 3
+    MaxCount: 5
   Blocks: []
 --- !u!114 &114995539895230082
 MonoBehaviour:
