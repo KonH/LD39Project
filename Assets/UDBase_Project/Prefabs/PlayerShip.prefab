@@ -211,7 +211,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Energy: 0
   MaxEnergy: 100
-  Decrease: 1
+  Decrease: 2.5
+  OnEnergyChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114795074624231670
 MonoBehaviour:
   m_ObjectHideFlags: 1

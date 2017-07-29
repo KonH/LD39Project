@@ -118,8 +118,8 @@ MonoBehaviour:
     MinCount: 10
     MaxCount: 25
   - Prefab: {fileID: 1660207780204382, guid: 5a293a58055de48cd839548a62e117c3, type: 2}
-    MinCount: 0
-    MaxCount: 0
+    MinCount: 3
+    MaxCount: 5
   - Prefab: {fileID: 1447426250144524, guid: 8a1a4c667177f4aaeb14dfd15f1be1a6, type: 2}
     MinCount: 3
     MaxCount: 5

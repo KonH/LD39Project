@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace UDBase_Project.Scripts.Logics {
 	[RequireComponent(typeof(Collider))]
@@ -7,6 +8,8 @@ namespace UDBase_Project.Scripts.Logics {
 		public float Energy;
 		public float MaxEnergy = 100.0f;
 		public float Decrease = 0.5f;
+		
+		public UnityEvent OnEnergyChanged;
 
 		void Start() {
 			Energy = MaxEnergy;
@@ -14,6 +17,7 @@ namespace UDBase_Project.Scripts.Logics {
 
 		void Update() {
 			Energy -= Decrease * Time.deltaTime;
+			UpdateValue();
 		}
 
 		void OnCollisionEnter(Collision other) {
@@ -23,7 +27,12 @@ namespace UDBase_Project.Scripts.Logics {
 			}
 			Energy += block.Energy;
 			Energy = Mathf.Min(Energy, MaxEnergy);
+			UpdateValue();
 			block.Kill();
+		}
+
+		void UpdateValue() {
+			OnEnergyChanged.Invoke();
 		}
 	}
 }
