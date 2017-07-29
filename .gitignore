@@ -4,3 +4,4 @@ Temp
 *.csproj
 .idea
 obj
+*.userprefs

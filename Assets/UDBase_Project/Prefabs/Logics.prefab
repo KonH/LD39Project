@@ -153,4 +153,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: {fileID: 0}
-  DeadZone: {x: 0.1, y: 0.1}
+  DeadZone: {x: 0.01, y: 0.01}
