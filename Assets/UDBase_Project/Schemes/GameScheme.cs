@@ -6,13 +6,16 @@ using UDBase.Controllers.LogSystem;
 using UDBase.Controllers.SaveSystem;
 using UDBase.Controllers.SceneSystem;
 using UDBase.Controllers.UserSystem;
+using UDBase_Project.Scripts.Logics;
 
 public class ProjectScheme : Scheme {
 
 	public ProjectScheme() {
 		AddController<Log>(new UnityLog());
 		
-		var save = new FsJsonDataSave().AddNode<UserSaveNode>("user");
+		var save = new FsJsonDataSave().
+			AddNode<UserSaveNode>("user").
+			AddNode<GameState>("state");
 		AddController<Save>(save);
 		
 		AddController<Scene>(new DirectSceneLoader());

@@ -1,5 +1,7 @@
-﻿using UDBase.Controllers.SceneSystem;
+﻿using UDBase.Controllers.SaveSystem;
+using UDBase.Controllers.SceneSystem;
 using UDBase.Controllers.UserSystem;
+using UDBase_Project.Scripts.Logics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,7 +21,12 @@ namespace UDBase_Project.Scripts.UI {
 		}
 
 		void OnStartClick() {
-			Scene.LoadScene("Game");
+			var state = Save.GetNode<GameState>();
+			if (!state.TutorialShown) {
+				Scene.LoadScene("Tutorial");
+			} else {
+				Scene.LoadScene("Game");
+			}
 		}
 
 		void OnLeaderboardClick() {
