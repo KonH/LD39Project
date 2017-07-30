@@ -43,7 +43,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -86,7 +86,8 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 14f6c7b597a564cbc8d423bbaac81b94,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -324,6 +325,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dfd7c657afe4141859b1af9976c79440, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &615154011 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1880508776167978, guid: dfd7c657afe4141859b1af9976c79440,
+    type: 2}
+  m_PrefabInternal: {fileID: 615154010}
+--- !u!114 &615154012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 615154011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62e46b91ff2d41bfa7834ab3cdcd7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Controller: {fileID: 1634030992}
 --- !u!114 &979264000 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114413270954656400, guid: ffc3810864aa84c9281b5c8212dc0d3d,

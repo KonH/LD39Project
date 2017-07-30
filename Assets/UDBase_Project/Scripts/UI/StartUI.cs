@@ -1,4 +1,5 @@
-﻿using UDBase.Controllers.UserSystem;
+﻿using UDBase.Controllers.SceneSystem;
+using UDBase.Controllers.UserSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,11 +11,21 @@ namespace UDBase_Project.Scripts.UI {
 		public Button LeaderboardButton;
 	
 		void Start () {
+			StartButton.onClick.AddListener(OnStartClick);
+			LeaderboardButton.onClick.AddListener(OnLeaderboardClick);
 			LoadName();
 			NameInput.onValueChanged.AddListener(OnNameChanged);
 			UpdateState();
 		}
 
+		void OnStartClick() {
+			Scene.LoadScene("Game");
+		}
+
+		void OnLeaderboardClick() {
+			Scene.LoadScene("Leaderboard");
+		}
+		
 		void LoadName() {
 			NameInput.text = User.Name;
 		}

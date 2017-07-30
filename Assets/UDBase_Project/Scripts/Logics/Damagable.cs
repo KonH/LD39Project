@@ -35,7 +35,9 @@ namespace UDBase_Project.Scripts.Logics {
 		}
 
 		void Kill() {
-			if (!GetComponent<PlayerMark>()) {
+			if (GetComponent<PlayerMark>()) {
+				Events.Fire(new PlayerDestroyed());
+			} else {
 				if (GetComponent<EnemyShip>()) {
 					Events.Fire(new EnemyDestroyed());
 				} else {
