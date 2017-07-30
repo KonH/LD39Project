@@ -26,6 +26,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1259338182858824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4722166202826678}
+  - component: {fileID: 114002526184434880}
+  m_Layer: 0
+  m_Name: Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1560545904343026
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,6 +84,7 @@ GameObject:
   - component: {fileID: 4790942231246620}
   - component: {fileID: 114995539895230082}
   - component: {fileID: 114091800249656748}
+  - component: {fileID: 114957419828541518}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -88,6 +105,7 @@ Transform:
   - {fileID: 4790942231246620}
   - {fileID: 4895279478732294}
   - {fileID: 4618834216856582}
+  - {fileID: 4722166202826678}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -103,6 +121,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4375837372004862}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4722166202826678
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259338182858824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4375837372004862}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4790942231246620
 Transform:
@@ -130,6 +161,19 @@ Transform:
   m_Father: {fileID: 4375837372004862}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114002526184434880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259338182858824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc886e267a7d1454dbc202aceb499b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxAttacks: 2
+  MaxEnemies: 7
 --- !u!114 &114091800249656748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,6 +201,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 119e441644d564901a7dd4f498c1e562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeInterval: 5
+  ScoresByTime: 5
+  ScoresByKill: 100
+  ScoresByEnergy: 50
+  ScoresByAsteroid: 25
+  Scores: 0
+  OnScoresChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114305766849598522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,13 +230,28 @@ MonoBehaviour:
   - Prefab: {fileID: 1974282350944402, guid: 41217e7025db04977a03c97d8e85bb13, type: 2}
     MinCount: 10
     MaxCount: 25
+    IsEnemy: 0
   - Prefab: {fileID: 1660207780204382, guid: 5a293a58055de48cd839548a62e117c3, type: 2}
     MinCount: 1
     MaxCount: 3
+    IsEnemy: 1
   - Prefab: {fileID: 1447426250144524, guid: 8a1a4c667177f4aaeb14dfd15f1be1a6, type: 2}
     MinCount: 3
     MaxCount: 5
+    IsEnemy: 0
   Blocks: []
+--- !u!114 &114957419828541518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1880508776167978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62e46b91ff2d41bfa7834ab3cdcd7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Controller: {fileID: 114152655567408454}
 --- !u!114 &114995539895230082
 MonoBehaviour:
   m_ObjectHideFlags: 1

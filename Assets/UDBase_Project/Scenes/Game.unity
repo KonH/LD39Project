@@ -158,6 +158,11 @@ Prefab:
       propertyPath: Damage
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 114795074624231670, guid: ffc3810864aa84c9281b5c8212dc0d3d,
+        type: 2}
+      propertyPath: Godmode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffc3810864aa84c9281b5c8212dc0d3d, type: 2}
   m_IsPrefabParent: 0
@@ -297,16 +302,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114995539895230082, guid: dfd7c657afe4141859b1af9976c79440,
-        type: 2}
-      propertyPath: Movement
-      value: 
-      objectReference: {fileID: 422827240}
-    - target: {fileID: 114305766849598522, guid: dfd7c657afe4141859b1af9976c79440,
-        type: 2}
-      propertyPath: Trigger
-      value: 
-      objectReference: {fileID: 1257584122}
     - target: {fileID: 114091800249656748, guid: dfd7c657afe4141859b1af9976c79440,
         type: 2}
       propertyPath: Holder
@@ -322,26 +317,19 @@ Prefab:
       propertyPath: Weapons.Array.data[1]
       value: 
       objectReference: {fileID: 389484377}
+    - target: {fileID: 114305766849598522, guid: dfd7c657afe4141859b1af9976c79440,
+        type: 2}
+      propertyPath: Trigger
+      value: 
+      objectReference: {fileID: 1257584122}
+    - target: {fileID: 114995539895230082, guid: dfd7c657afe4141859b1af9976c79440,
+        type: 2}
+      propertyPath: Movement
+      value: 
+      objectReference: {fileID: 422827240}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dfd7c657afe4141859b1af9976c79440, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &615154011 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1880508776167978, guid: dfd7c657afe4141859b1af9976c79440,
-    type: 2}
-  m_PrefabInternal: {fileID: 615154010}
---- !u!114 &615154012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 615154011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a62e46b91ff2d41bfa7834ab3cdcd7ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Controller: {fileID: 1634030992}
 --- !u!114 &979264000 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114413270954656400, guid: ffc3810864aa84c9281b5c8212dc0d3d,

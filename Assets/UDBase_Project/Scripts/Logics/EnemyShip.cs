@@ -1,14 +1,27 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace UDBase_Project.Scripts.Logics {
 	[RequireComponent(typeof(ShipMovement))]
 	public class EnemyShip : MonoBehaviour {
+		public static List<EnemyShip> Instances = new List<EnemyShip>();
+		
 		public float MinDistance;
 		
 		ShipMovement _movement;
 		Weapon[] _weapons;
-		
+		EnemyController _controller;
+
+		void OnEnable() {
+			Instances.Add(this);
+		}
+
+		void OnDisable() {
+			Instances.Remove(this);
+		}
+
 		void Start() {
+			_controller = EnemyController.Instance;
 			_movement = GetComponent<ShipMovement>();
 			_weapons = GetComponentsInChildren<Weapon>();
 		}
@@ -26,9 +39,13 @@ namespace UDBase_Project.Scripts.Logics {
 				_movement.MoveVector = direction.normalized;
 			} else {
 				_movement.MoveVector = Vector3.zero;
+				if (!_controller.CanAttack()) {
+					return;
+				}
 				foreach (var weapon in _weapons) {
 					weapon.TryShoot();
 				}
+				_controller.AddAttack();
 			}
 		}
 	}

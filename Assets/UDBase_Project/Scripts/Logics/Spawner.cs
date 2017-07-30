@@ -10,6 +10,7 @@ namespace UDBase_Project.Scripts.Logics {
 		public class GenerationInfo {
 			public GameObject Prefab;
 			public int MinCount, MaxCount;
+			public bool IsEnemy;
 		}
 		
 		[System.Serializable]
@@ -28,8 +29,14 @@ namespace UDBase_Project.Scripts.Logics {
 		public List<GenerationInfo> Infos = new List<GenerationInfo>();
 		public List<Block> Blocks = new List<Block>();
 
+		EnemyController _enemyController;
+
 		Vector3Int FindPosition() {
 			return ConvertToIntVector(Trigger.position);
+		}
+
+		void Start() {
+			_enemyController = EnemyController.Instance;
 		}
 
 		void Update() {
@@ -93,6 +100,9 @@ namespace UDBase_Project.Scripts.Logics {
 			foreach (var info in Infos) {
 				var count = Random.Range(info.MinCount, info.MaxCount + 1);
 				for (int i = 0; i < count; i++) {
+					if (info.IsEnemy && !_enemyController.CanSpawn()) {
+						count = 0;
+					}
 					var generatePos = FindGeneratePosition(pos);
 					Instantiate(info.Prefab, generatePos, Quaternion.identity);
 					yield return null;
