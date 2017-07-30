@@ -459,3 +459,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Energy: 75
+  Effect: {fileID: 1744295033471414, guid: c7272b1d1f9804952b250acef45319e8, type: 2}

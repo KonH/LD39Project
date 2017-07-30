@@ -9,7 +9,8 @@ namespace UDBase_Project.Scripts.Logics {
 		public float Health;
 		public float MaxHealth = 100.0f;
 		public bool Godmode;
-
+		public GameObject DestroyEffect;
+		
 		public UnityEvent OnHealthChanged;
 
 		void Start() {
@@ -44,6 +45,7 @@ namespace UDBase_Project.Scripts.Logics {
 					Events.Fire(new AsteroidDestroyed());
 				}
 			}
+			Instantiate(DestroyEffect, transform.position, Quaternion.identity);
 			Destroy(gameObject);
 		}
 	}

@@ -401,6 +401,8 @@ MonoBehaviour:
   Health: 0
   MaxHealth: 5
   Godmode: 0
+  DestroyEffect: {fileID: 1487900746765276, guid: d18e54fcc1723411ca46d4f2e3bed510,
+    type: 2}
   OnHealthChanged:
     m_PersistentCalls:
       m_Calls: []
