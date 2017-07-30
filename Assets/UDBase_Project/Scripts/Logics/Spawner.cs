@@ -102,6 +102,7 @@ namespace UDBase_Project.Scripts.Logics {
 				for (int i = 0; i < count; i++) {
 					if (info.IsEnemy && !_enemyController.CanSpawn()) {
 						count = 0;
+						break;
 					}
 					var generatePos = FindGeneratePosition(pos);
 					Instantiate(info.Prefab, generatePos, Quaternion.identity);

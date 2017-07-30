@@ -869,6 +869,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinDistance: 10
+  MaxAttackTime: 1
+  CooldownTime: 4
 --- !u!114 &114457123497590308
 MonoBehaviour:
   m_ObjectHideFlags: 1

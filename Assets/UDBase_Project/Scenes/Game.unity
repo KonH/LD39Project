@@ -302,6 +302,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114995539895230082, guid: dfd7c657afe4141859b1af9976c79440,
+        type: 2}
+      propertyPath: Movement
+      value: 
+      objectReference: {fileID: 422827240}
+    - target: {fileID: 114305766849598522, guid: dfd7c657afe4141859b1af9976c79440,
+        type: 2}
+      propertyPath: Trigger
+      value: 
+      objectReference: {fileID: 1257584122}
     - target: {fileID: 114091800249656748, guid: dfd7c657afe4141859b1af9976c79440,
         type: 2}
       propertyPath: Holder
@@ -317,16 +327,6 @@ Prefab:
       propertyPath: Weapons.Array.data[1]
       value: 
       objectReference: {fileID: 389484377}
-    - target: {fileID: 114305766849598522, guid: dfd7c657afe4141859b1af9976c79440,
-        type: 2}
-      propertyPath: Trigger
-      value: 
-      objectReference: {fileID: 1257584122}
-    - target: {fileID: 114995539895230082, guid: dfd7c657afe4141859b1af9976c79440,
-        type: 2}
-      propertyPath: Movement
-      value: 
-      objectReference: {fileID: 422827240}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dfd7c657afe4141859b1af9976c79440, type: 2}
   m_IsPrefabParent: 0
