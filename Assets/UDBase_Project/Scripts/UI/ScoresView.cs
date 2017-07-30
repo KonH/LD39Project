@@ -1,4 +1,5 @@
-﻿using UDBase_Project.Scripts.Logics;
+﻿using DG.Tweening;
+using UDBase_Project.Scripts.Logics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,12 @@ namespace UDBase_Project.Scripts.UI {
 		}
 
 		void UpdateScores() {
-			_text.text = Controller.Scores.ToString();
+			var scores = Controller.Scores;
+			_text.text = scores.ToString();
+			if (scores > 0) {
+				transform.localScale = Vector3.one;
+				transform.DOShakeScale(0.4f, 0.4f);
+			}
 		}
 	}
 }

@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 0}
-  ShowHideToggle: 9
+  ShowHideToggle: 0
 --- !u!4 &410881637
 Transform:
   m_ObjectHideFlags: 0
