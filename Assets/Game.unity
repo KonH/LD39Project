@@ -296,6 +296,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114995539895230082, guid: dfd7c657afe4141859b1af9976c79440,
+        type: 2}
+      propertyPath: Movement
+      value: 
+      objectReference: {fileID: 422827240}
+    - target: {fileID: 114305766849598522, guid: dfd7c657afe4141859b1af9976c79440,
+        type: 2}
+      propertyPath: Trigger
+      value: 
+      objectReference: {fileID: 1257584122}
     - target: {fileID: 114091800249656748, guid: dfd7c657afe4141859b1af9976c79440,
         type: 2}
       propertyPath: Holder
@@ -311,16 +321,6 @@ Prefab:
       propertyPath: Weapons.Array.data[1]
       value: 
       objectReference: {fileID: 389484377}
-    - target: {fileID: 114305766849598522, guid: dfd7c657afe4141859b1af9976c79440,
-        type: 2}
-      propertyPath: Trigger
-      value: 
-      objectReference: {fileID: 1257584122}
-    - target: {fileID: 114995539895230082, guid: dfd7c657afe4141859b1af9976c79440,
-        type: 2}
-      propertyPath: Movement
-      value: 
-      objectReference: {fileID: 422827240}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dfd7c657afe4141859b1af9976c79440, type: 2}
   m_IsPrefabParent: 0
@@ -546,22 +546,22 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114942626718050226, guid: 28931f25c9cff41e680f4f0b091c36a6,
+    - target: {fileID: 114438764438331712, guid: 28931f25c9cff41e680f4f0b091c36a6,
         type: 2}
       propertyPath: Damagable
       value: 
       objectReference: {fileID: 422827241}
-    - target: {fileID: 114571583355613486, guid: 28931f25c9cff41e680f4f0b091c36a6,
-        type: 2}
-      propertyPath: Holder
-      value: 
-      objectReference: {fileID: 1257584123}
     - target: {fileID: 114254908101685524, guid: 28931f25c9cff41e680f4f0b091c36a6,
         type: 2}
       propertyPath: Holder
       value: 
       objectReference: {fileID: 1257584123}
-    - target: {fileID: 114438764438331712, guid: 28931f25c9cff41e680f4f0b091c36a6,
+    - target: {fileID: 114571583355613486, guid: 28931f25c9cff41e680f4f0b091c36a6,
+        type: 2}
+      propertyPath: Holder
+      value: 
+      objectReference: {fileID: 1257584123}
+    - target: {fileID: 114942626718050226, guid: 28931f25c9cff41e680f4f0b091c36a6,
         type: 2}
       propertyPath: Damagable
       value: 
@@ -586,6 +586,17 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114157932910870930, guid: 28931f25c9cff41e680f4f0b091c36a6,
+        type: 2}
+      propertyPath: Controller
+      value: 
+      objectReference: {fileID: 1634030992}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28931f25c9cff41e680f4f0b091c36a6, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1634030992 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114152655567408454, guid: dfd7c657afe4141859b1af9976c79440,
+    type: 2}
+  m_PrefabInternal: {fileID: 615154010}
+  m_Script: {fileID: 11500000, guid: 119e441644d564901a7dd4f498c1e562, type: 3}

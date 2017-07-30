@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UDBase.Controllers.EventSystem;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace UDBase_Project.Scripts.Logics {
@@ -34,6 +35,13 @@ namespace UDBase_Project.Scripts.Logics {
 		}
 
 		void Kill() {
+			if (!GetComponent<PlayerMark>()) {
+				if (GetComponent<EnemyShip>()) {
+					Events.Fire(new EnemyDestroyed());
+				} else {
+					Events.Fire(new AsteroidDestroyed());
+				}
+			}
 			Destroy(gameObject);
 		}
 	}

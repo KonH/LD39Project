@@ -1,12 +1,11 @@
 #if Scheme_GameScheme
-using UnityEngine;
-using System.Collections;
 using UDBase.Common;
+using UDBase.Controllers.EventSystem;
 
 public class ProjectScheme : Scheme {
 
 	public ProjectScheme() {
-		// Add your initialization code here
+		AddController<Events>(new EventController());
 	}
 }
 #endif
