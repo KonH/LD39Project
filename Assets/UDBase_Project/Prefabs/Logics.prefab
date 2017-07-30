@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxAttacks: 2
-  MaxEnemies: 7
+  MaxEnemies: 4
 --- !u!114 &114091800249656748
 MonoBehaviour:
   m_ObjectHideFlags: 1
