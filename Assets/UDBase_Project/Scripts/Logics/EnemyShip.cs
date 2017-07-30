@@ -32,6 +32,9 @@ namespace UDBase_Project.Scripts.Logics {
 				return;
 			}
 			var targetTrans = target.transform;
+			if (!_controller.CanAttack()) {
+				_movement.MoveVector = transform.forward;
+			}
 			transform.LookAt(targetTrans);
 			if (Vector3.Distance(transform.position, targetTrans.position) > MinDistance) {
 				var direction = targetTrans.position - transform.position;
@@ -39,9 +42,6 @@ namespace UDBase_Project.Scripts.Logics {
 				_movement.MoveVector = direction.normalized;
 			} else {
 				_movement.MoveVector = Vector3.zero;
-				if (!_controller.CanAttack()) {
-					return;
-				}
 				foreach (var weapon in _weapons) {
 					weapon.TryShoot();
 				}
