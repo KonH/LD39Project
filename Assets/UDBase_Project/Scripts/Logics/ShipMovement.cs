@@ -6,6 +6,7 @@ namespace UDBase_Project.Scripts.Logics {
 		public float MoveForwardSpeed = 1.0f;
 		public float StrafeSpeed = 1.0f;
 		public float RotateSpeed = 1.0f;
+		public bool ApplyRotation;
 		
 		[HideInInspector]
 		public Vector3 MoveVector = Vector3.zero;
@@ -18,16 +19,19 @@ namespace UDBase_Project.Scripts.Logics {
 			_rb = GetComponent<Rigidbody>();
 		}
 
-		void Update() {
-			MoveVector.x *= StrafeSpeed;
-			MoveVector.z *= MoveForwardSpeed;
-			MoveVector.z = Mathf.Max(MoveVector.z, 0.0f);
-			var vect = transform.TransformDirection(MoveVector);
-			if (float.IsNaN(vect.x) || float.IsInfinity(vect.x)) {
+		void FixedUpdate() {
+			var velocity = new Vector3(MoveVector.x, MoveVector.y, MoveVector.z);
+			velocity.x *= StrafeSpeed;
+			velocity.z *= MoveForwardSpeed;
+			velocity.z = Mathf.Max(velocity.z, 0.0f);
+			velocity = transform.TransformVector(velocity);
+			if (float.IsNaN(velocity.x) || float.IsInfinity(velocity.x)) {
 				return;
 			}
-			_rb.velocity = vect;
-			_rb.MoveRotation(Quaternion.Euler(RotateVector * RotateSpeed));
+			_rb.velocity = velocity;
+			if (ApplyRotation) {
+				_rb.MoveRotation(Quaternion.Euler(RotateVector * RotateSpeed));
+			}
 		}
 	}
 }

@@ -880,7 +880,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 100
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -976,9 +976,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c5910cd303d4aff88b1b1d5e4b7b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveForwardSpeed: 10
-  StrafeSpeed: 0.5
+  MoveForwardSpeed: 7.5
+  StrafeSpeed: 2.5
   RotateSpeed: 5
+  ApplyRotation: 1
   MoveVector: {x: 0, y: 0, z: 0}
   RotateVector: {x: 0, y: 0, z: 0}
 --- !u!114 &114770078618616458

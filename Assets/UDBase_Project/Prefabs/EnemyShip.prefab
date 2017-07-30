@@ -907,8 +907,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveForwardSpeed: 5
-  StrafeSpeed: 0.5
-  RotateSpeed: 1
+  StrafeSpeed: 0
+  RotateSpeed: 0
+  ApplyRotation: 0
   MoveVector: {x: 0, y: 0, z: 0}
   RotateVector: {x: 0, y: 0, z: 0}
 --- !u!114 &114937248796953990
