@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4670441931012122}
   - component: {fileID: 120712535594332734}
+  - component: {fileID: 114473656458682062}
   m_Layer: 0
   m_Name: LineRenderer
   m_TagString: Untagged
@@ -194,6 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4727974797707532}
   - component: {fileID: 120060045546311176}
+  - component: {fileID: 114585310852928622}
   m_Layer: 0
   m_Name: LineRenderer
   m_TagString: Untagged
@@ -881,6 +883,34 @@ MonoBehaviour:
   Damage: 0.1
   MaxDistance: 50
   Line: {fileID: 120712535594332734}
+--- !u!114 &114473656458682062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069121698469822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6158f270839494bb6a6181543dfc8475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartColor: {r: 0.6102941, g: 0.17949826, b: 0.17949826, a: 0}
+  EndColor: {r: 1, g: 0, b: 0, a: 1}
+  Speed: 3
+--- !u!114 &114585310852928622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886954891233270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6158f270839494bb6a6181543dfc8475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartColor: {r: 0.6102941, g: 0.17949826, b: 0.17949826, a: 0}
+  EndColor: {r: 1, g: 0, b: 0, a: 1}
+  Speed: 3
 --- !u!114 &114691009382118134
 MonoBehaviour:
   m_ObjectHideFlags: 1
