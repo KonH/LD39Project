@@ -500,7 +500,7 @@ PlayerSettings:
     1: CROSS_PLATFORM_INPUT;Scheme_GameScheme;Scheme_Declared
     4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
     7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    13: Scheme_GameScheme;Scheme_Declared
+    13: Scheme_PublishScheme;Scheme_Declared
     14: MOBILE_INPUT
     17: MOBILE_INPUT
     20: MOBILE_INPUT
